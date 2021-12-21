@@ -1,0 +1,350 @@
+/*--Адаптивное меню--*/
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption");
+.adept-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0 30px;
+  margin: 0;
+  font-size: 18px;
+  text-align: center;
+  position: relative;
+  background: white;
+}
+.adept-menu:after {
+  content: "";
+  position: absolutes;
+  width: 100%;
+  height: 20px;
+  left: 0;
+  bottom: -20px;
+}
+.adept-menu li {
+  display: block;
+}
+.adept-menu a {
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 15px;
+  padding: 10px 40px;
+  font-family: "PT Sans Caption", sans-serif;
+  color: #777777;
+  transition: 0.3s linear;
+  position: relative;
+  white-space: nowrap;
+}
+.adept-menu a:before,
+.adept-menu a:after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 3px);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgb(241, 91, 184);
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+}
+.adept-menu a:before {
+  left: 5px;
+}
+.adept-menu a:after {
+  right: 5px;
+}
+.adept-menu a.current:before,
+.adept-menu a.current:after,
+.adept-menu a:hover:before,
+.adept-menu a:hover:after {
+  opacity: 1;
+}
+.adept-menu a.current,
+.adept-menu a:hover {
+  color: rgb(241, 91, 184);
+}
+@media (max-width: 680px) {
+  .adept-menu li {
+    display: block;
+  }
+}
+/*Логотип в header*/
+.rounded-circle-img {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  margin-right: 30px;
+  background-color: rgb(250, 250, 250);
+  border-radius: 100px;
+  border: white;
+  box-shadow: 0 0 7px #666;
+  align-self: left;
+}
+
+/*--Контейнер FlexBox--*/
+html,
+body {
+  height: 100%;
+}
+.container2 {
+  max-width: 1140px;
+  background-color: rgb(250, 250, 250);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0 auto;
+}
+.container1 {
+  width: 1150px;
+  margin: 0 auto;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+
+main {
+  background-color: white;
+  flex-grow: 1; /*растягивает элемемнт на все свободное место*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+footer {
+  height: 250px;
+  background-color: white;
+}
+/*-----------Стиль строки поиска-----------*/
+/*------------Стиль меню сайта------------*/
+.main-menu {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+}
+.menu-item {
+  width: 200px;
+  height: 250px;
+  margin: 2px;
+
+  font-size: 18px;
+  border: 1px;
+  border-radius: 10px;
+  list-style: none;
+  padding: 0 30px;
+  background: rgb(253, 248, 251);
+}
+.main-menu1 {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.menu-item1 {
+  width: 800px;
+  height: 500px;
+  margin: 2px;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  border: 1px;
+  border-radius: 10px;
+  list-style: none;
+  padding: 0 30px;
+  background: rgb(253, 248, 251);
+}
+.product-menuItem {
+  border-radius: 10px;
+}
+.main-menu2 {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.menu-item2 {
+  width: 305px;
+  height: 110px;
+  margin: 2px;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  border: 1px;
+  border-radius: 10px;
+  list-style: none;
+  padding: 0 30px;
+  background: rgb(253, 248, 251);
+}
+
+.button-catalog {
+  background-color: rgb(243, 108, 191);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+/*-----Слайдер--------*/
+.slider {
+  position: relative;
+  width: 900px;
+  margin: 0 auto;
+}
+
+.slider__item {
+  padding-top: 50px;
+  width: 100%;
+  height: 900px;
+  border-radius: 10px;
+  background: url("../img/1px.webp");
+  transition: all 3s;
+}
+
+.slider__name {
+  margin: 0 50px;
+  color: darkblue;
+  background-color: white;
+  padding: 10px;
+}
+
+.slider__btn {
+  background: none;
+  border: none;
+}
+
+.slider__btn--next {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+}
+
+.slider__btn--next:hover {
+  border: darkblue 1px solid;
+  border-radius: 5px;
+}
+
+.slider__btn--prev {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+}
+.slider__nav {
+  text-align: center;
+}
+
+.slider__btn--nav {
+  width: 30px;
+  height: 5px;
+  background-color: lightskyblue;
+  border: none;
+}
+
+.slider__btn--nav:hover {
+  background-color: darkblue;
+}
+
+/*Подвал*/
+
+.my__link_big,
+.my__link {
+  color: #525252;
+  font-size: 14.4px;
+}
+
+.footer_main {
+  margin-top: 10px;
+  background-color: #7e7e7e;
+  background: url("bg.jpg");
+  font-family: "Scada", sans-serif;
+}
+
+.footer {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.clear_footer,
+.b-footer__social,
+.bem_sitemap {
+  margin-top: 12px;
+  margin-left: 70px;
+  padding-left: 26px;
+  float: left;
+}
+
+.logo_align {
+  float: right;
+}
+
+.size_block {
+  width: 150px;
+}
+
+.description {
+  width: 400px;
+}
+
+.tet_header,
+.footer-title,
+.b-networks__header {
+
+  color: rgb(243, 108, 191);
+  border-color: rgba(0, 91, 173, 0.3);
+  font-size: 17px;
+  width: 100%;
+  letter-spacing: 1px;
+}
+
+.btext {
+  margin-top: 3px;
+  font-size: 14.6px;
+  color: rgb(243, 108, 191);
+  list-style-type: none;
+}
+
+.clear_footer {
+  height: 23px;
+}
+
+.b-sitemap__links {
+  float: left;
+}
+
+.glow_undecorate {
+  color: rgb(243, 108, 191);
+
+}
+
+.b-link_block {
+  margin-top: 12px;
+  display: block;
+}
+
+.b-sitemap__links_right {
+  float: right;
+  margin-right: -10px;
+  letter-spacing: 1px;
+}
+
+.b-footer-logo__copyright {
+  clear: right;
+  text-shadow: 0 0 20px #ff6632, 0 0 30px #ff6632;
+  color: #ffb762 !important;
+  padding-top: 8px;
+}
+
+.b-footer-logo__copyright {
+  font-size: 21px;
+  color: #f5f5f5;
+  text-align: right;
+}

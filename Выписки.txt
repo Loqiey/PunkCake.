@@ -1,0 +1,8 @@
+              /*Создание кнопки*/ 
+     
+<form class="form-wrapper cf">
+<input type="text" placeholder="Что найти?" required>
+<button type="submit">Искать</button>
+</form>
+
+                   /*Конец*/
